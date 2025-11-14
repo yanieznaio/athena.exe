@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { ArrowBigRight, Menu, X } from "lucide-react";
 import Link from "next/link";
 
 export default function Header() {
@@ -33,9 +33,9 @@ export default function Header() {
           {/* Desktop Login */}
           <Link
             href="/contact-check"
-            className=" block px-6 py-2 rounded-full font-semibold tracking-[-0.02em]"
+            className=" block px-6 py-2 flex rounded-full font-semibold tracking-[-0.02em]"
           >
-            Bac A Sable
+            Bac A Sable <ArrowBigRight />
           </Link>
         </div>
       </div>
