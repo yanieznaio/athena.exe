@@ -12,10 +12,10 @@ interface BigTitleProps {
 }
 
 const sizeClasses = {
-  small: "text-[6rem]",
-  medium: "text-[8rem]",
-  large: "text-[10rem]",
-  xlarge: "text-[12rem]",
+  small: "md:text-[6rem] text-6xl",
+  medium: "md:text-[8rem] text-6xl",
+  large: "md:text-[10rem] text-6xl",
+  xlarge: "md:text-[12rem] text-6xl",
 };
 
 const BigTitle: React.FC<BigTitleProps> = ({
