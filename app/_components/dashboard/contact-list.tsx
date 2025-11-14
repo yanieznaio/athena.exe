@@ -351,10 +351,7 @@ export function ContactList() {
                 className="rounded-xl opacity-0 group-hover:opacity-100 transition-opacity"
                 disabled={contact.status !== "valid"}
               >
-                <Phone
-                  className="h-4 w-4"
-                  style={{ color: "rgb(248, 254, 35)" }}
-                />
+                <Phone className="h-4 w-4 text-yellow" />
               </Button>
             </div>
           ))}
