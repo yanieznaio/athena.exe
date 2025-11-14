@@ -22,7 +22,7 @@ export default function Home() {
         imagePosition="center"
       >
         <BigTextTitle
-          lines={["Hello World", "Yellow Text"]}
+          lines={["ESSAYE ", "MAINTENANT"]}
           size="large"
           color="yellow" // yellow text
           align="center"
