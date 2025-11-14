@@ -2,17 +2,14 @@
 import React, { useState } from "react";
 import { ArrowBigRight, Menu, X } from "lucide-react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
-  const navLinks = [
-    { name: "Features", href: "#features" },
-    { name: "Solutions", href: "#solutions" },
-    { name: "Pricing", href: "#pricing" },
-    { name: "About", href: "#about" },
-    { name: "Contact", href: "#contact" },
-  ];
+  const pathname = usePathname(); // get current pa
+  // Determine link text and destination
+  const isContactCheck = pathname === "/contact-check";
+  const linkText = isContactCheck ? "ACCUEIL" : "Bac A Sable";
+  const linkHref = isContactCheck ? "/" : "/contact-check";
 
   return (
     <>
@@ -24,7 +21,7 @@ export default function Header() {
             href="/"
             className="text-2xl font-extrabold uppercase tracking-[-0.03em]"
           >
-            ATHENA
+            ATHENA.EXE
           </a>
         </div>
 
@@ -32,10 +29,10 @@ export default function Header() {
         <div className="flex-1 flex justify-end items-center gap-4">
           {/* Desktop Login */}
           <Link
-            href="/contact-check"
-            className=" block px-6 py-2 flex rounded-full font-semibold tracking-[-0.02em]"
+            href={linkHref}
+            className="block px-6 py-2 flex rounded-full font-semibold tracking-[-0.02em]"
           >
-            Bac A Sable <ArrowBigRight />
+            {linkText} <ArrowBigRight />
           </Link>
         </div>
       </div>

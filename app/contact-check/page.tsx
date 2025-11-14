@@ -12,24 +12,15 @@ export default function Dashboard() {
       <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-2xl border-b border-black/5">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex h-14 items-center justify-between">
-            <div className="flex items-center gap-3">
-              <div
-                className="flex h-9 w-9 items-center justify-center rounded-2xl shadow-sm transition-transform hover:scale-105"
-                style={{ background: "rgb(248, 254, 35)" }}
-              >
-                <Phone className="h-4 w-4 text-gray-900" strokeWidth={2.5} />
-              </div>
-              <div>
-                <h1 className="text-base font-semibold text-gray-900 tracking-tight">
-                  Athena.exe
-                </h1>
+            <div className="flex items-center justify-center gap-3">
+              <div className="ml-20">
                 <p className="text-xs text-gray-500 hidden sm:block font-medium">
                   Appels automatisés
                 </p>
               </div>
             </div>
 
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-3 mr-10">
               <div
                 className="flex items-center gap-2 rounded-full px-3 py-1.5 shadow-sm border border-black/5"
                 style={{ background: "rgba(248, 254, 35, 0.12)" }}
