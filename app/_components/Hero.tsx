@@ -10,10 +10,10 @@ const Hero = () => {
     >
       {/* Hero Content */}
       <div className="relative z-10 text-center px-4">
-        <h1 className="text-6xl  mt-40 md:mt-0 md:text-[13vw] font-extrabold yellow tracking-tighter uppercase">
+        <h1 className="text-6xl  mt-40 md:mt-10 md:text-[13vw] font-extrabold yellow tracking-tighter uppercase">
           Vous etes la ?
         </h1>
-        <div className="w-ful text-xl md:text-[4.4rem] justify-between flex font-extrabold yellow uppercase md:-mt-30 tracking-tight">
+        <div className="w-ful text-xl md:text-[4.4rem] justify-between flex font-extrabold yellow uppercase md:-mt-10 tracking-tight">
           <h2> IA check </h2>
           <h2>tes contacts</h2>
         </div>
