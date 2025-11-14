@@ -1,7 +1,30 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import localFont from "next/font/local";
+import { Geist, Geist_Mono, Caveat } from "next/font/google";
 import "./globals.css";
+import Header from "./_components/Header";
+import SmoothScroll from "./_components/SmoothScroll";
+import Footer from "./_components/Footer";
 
+// Local Montreal font
+const montreal = localFont({
+  src: [
+    {
+      path: "../public/montreal/Montreal-Regular.ttf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../public/montreal/Montreal-Bold.ttf",
+      weight: "700",
+      style: "normal",
+    },
+  ],
+  variable: "--font-montreal",
+  display: "swap",
+});
+
+// Google fonts
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -10,6 +33,13 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+});
+
+// Handwriting font for Polaroids
+const caveat = Caveat({
+  variable: "--font-caveat",
+  subsets: ["latin"],
+  weight: ["400", "700"],
 });
 
 export const metadata: Metadata = {
@@ -25,9 +55,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${montreal.variable} ${geistSans.variable} ${geistMono.variable} ${caveat.variable} antialiased`}
       >
+        <SmoothScroll />
+        <Header />
         {children}
+        <Footer backgroundImage="/ChatGPT Image Nov 13, 2025, 10_33_07 PM.png" />
       </body>
     </html>
   );
