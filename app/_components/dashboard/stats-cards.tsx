@@ -10,32 +10,32 @@ export function StatsCards() {
       value: "142",
       change: "+12%",
       icon: CheckCircle2,
-      color: "text-success",
-      bgColor: "bg-success/10",
+      color: "black",
+      bgColor: "rgb(248, 254, 35)",
     },
     {
       label: "En attente",
       value: "8",
       change: "-3",
       icon: Clock,
-      color: "text-warning",
-      bgColor: "bg-warning/10",
+      color: "black",
+      bgColor: "rgb(248, 254, 35)",
     },
     {
       label: "Échecs",
       value: "5",
       change: "-2",
       icon: AlertCircle,
-      color: "text-destructive",
-      bgColor: "bg-destructive/10",
+      color: "black",
+      bgColor: "rgb(248, 254, 35)",
     },
     {
       label: "Total contacts",
       value: "328",
       change: "+24",
       icon: Phone,
-      color: "text-primary",
-      bgColor: "bg-primary/10",
+      color: "black",
+      bgColor: "rgb(248, 254, 35)",
     },
   ];
 
@@ -52,9 +52,13 @@ export function StatsCards() {
               <div className="p-3">
                 <div className="flex flex-col gap-2">
                   <div
-                    className={`${stat.bgColor} flex h-8 w-8 items-center justify-center rounded-lg self-start`}
+                    className="flex h-8 w-8 items-center justify-center rounded-lg self-start"
+                    style={{ background: stat.bgColor }}
                   >
-                    <Icon className={`h-4 w-4 ${stat.color}`} />
+                    <Icon
+                      className="h-4 w-4"
+                      style={{ color: stat.color, opacity: 1 }}
+                    />
                   </div>
                   <div>
                     <p className="text-xs font-medium text-muted-foreground">
@@ -97,9 +101,13 @@ export function StatsCards() {
                       </p>
                     </div>
                     <div
-                      className={`${stat.bgColor} flex h-10 w-10 items-center justify-center rounded-xl`}
+                      className="flex h-10 w-10 items-center justify-center rounded-xl"
+                      style={{ background: stat.bgColor }}
                     >
-                      <Icon className={`h-5 w-5 ${stat.color}`} />
+                      <Icon
+                        className="h-5 w-5"
+                        style={{ color: stat.color, opacity: 1 }}
+                      />
                     </div>
                   </div>
                 </div>

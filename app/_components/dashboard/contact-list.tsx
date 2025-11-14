@@ -82,7 +82,7 @@ export function ContactList() {
         text-align: center;
       ">
         <p style="margin-bottom: 18px; font-size: 16px;">
-          Voulez-vous lancer l’appel ?
+          Voulez-vous lancer l'appel ?
         </p>
         <button id="modalYes" style="padding: 8px 16px; margin-right: 8px;">Oui</button>
         <button id="modalNo" style="padding: 8px 16px;">Non</button>
@@ -251,7 +251,10 @@ export function ContactList() {
               onClick={() => fileInputRef.current?.click()}
               className="rounded-xl"
             >
-              <Upload className="h-4 w-4 mr-1.5" />
+              <Upload
+                className="h-4 w-4 mr-1.5"
+                style={{ color: "rgb(248, 254, 35)" }}
+              />
               {"Importer CSV"}
             </Button>
             <Button
@@ -259,14 +262,20 @@ export function ContactList() {
               onClick={handleExportCSV}
               className="rounded-xl bg-transparent"
             >
-              <Download className="h-4 w-4 mr-1.5" />
+              <Download
+                className="h-4 w-4 mr-1.5"
+                style={{ color: "rgb(248, 254, 35)" }}
+              />
               {"Exporter"}
             </Button>
           </div>
         </div>
 
         <div className="relative mb-4">
-          <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
+          <Search
+            className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2"
+            style={{ color: "rgb(248, 254, 35)" }}
+          />
           <Input
             placeholder="Rechercher un contact..."
             value={search}
@@ -283,7 +292,7 @@ export function ContactList() {
               className="group flex items-center justify-between rounded-xl border border-border bg-background p-3 transition-all hover:border-primary/50 hover:shadow-sm"
             >
               <div className="flex items-center gap-3 flex-1 min-w-0">
-                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-primary">
+                <div className="flex h-10 w-10 items-center justify-center text-black bg-yellow rounded-xl text-gray-900">
                   <span className="text-sm font-semibold">
                     {contact.name
                       .split(" ")
@@ -301,12 +310,18 @@ export function ContactList() {
 
                   <div className="flex flex-col sm:flex-row sm:items-center gap-0.5 sm:gap-2 text-xs text-muted-foreground">
                     <span className="flex items-center gap-1">
-                      <Phone className="h-3 w-3" />
+                      <Phone
+                        className="h-3 w-3"
+                        style={{ color: "rgb(248, 254, 35)" }}
+                      />
                       {contact.phone}
                     </span>
                     <span className="hidden sm:inline">{"•"}</span>
                     <span className="flex items-center gap-1">
-                      <Mail className="h-3 w-3" />
+                      <Mail
+                        className="h-3 w-3"
+                        style={{ color: "rgb(248, 254, 35)" }}
+                      />
                       {contact.email}
                     </span>
                   </div>
@@ -336,7 +351,10 @@ export function ContactList() {
                 className="rounded-xl opacity-0 group-hover:opacity-100 transition-opacity"
                 disabled={contact.status !== "valid"}
               >
-                <Phone className="h-4 w-4" />
+                <Phone
+                  className="h-4 w-4"
+                  style={{ color: "rgb(248, 254, 35)" }}
+                />
               </Button>
             </div>
           ))}
