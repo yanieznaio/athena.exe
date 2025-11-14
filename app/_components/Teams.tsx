@@ -1,6 +1,7 @@
 import React from "react";
 import BigTitle from "./BigTitle";
 import Polaroid from "./Polaroid";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 const Teams = () => {
   return (
