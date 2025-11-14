@@ -5,17 +5,17 @@ import Polaroid from "./Polaroid";
 const Teams = () => {
   return (
     <div className="py-40 cream flex flex-col justify-center items-center w-full max-w-8xl">
-      <h1 className="text-[12rem] text-center leading-[0.85] uppercase tracking-[-0.08em] font-extrabold max-w-8xl flex flex-col">
+      <h1 className="text-6xl md:text-[12rem] text-center leading-[0.85] uppercase tracking-[-0.08em] font-extrabold max-w-8xl flex flex-col">
         <span>
           Notre <strong className="purple">histoire</strong>{" "}
         </span>
         <span>et notre équipe</span>
       </h1>
-      <div className="ml-auto max-w-2xl mt-20 mr-20">
+      <div className="ml-auto max-w-2xl mt-20 md:mr-20 px-2">
         <h2 className="purple font-extrabold text-3xl">
           Né lors d'un hackathon au Stade Vélodrome
         </h2>
-        <p className="font-semibold text-3xl mt-2">
+        <p className="font-semibold text-3xl mt-2 ">
           VoiceCheck AI a été créé par l'équipe de{" "}
           <span className="italic font-extrabold">l'école 42 Marseille</span>{" "}
           lors d'un hackathon au Stade Vélodrome en collaboration avec
