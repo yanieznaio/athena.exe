@@ -8,7 +8,7 @@ import HighlightedText from "./HighlightedText";
 const About = () => {
   return (
     <div>
-      <div className="min-h-screen w-full bg-white flex flex-col justify-center items-center cream py-40">
+      <div className="min-h-screen w-full bg-white flex flex-col justify-center items-center cream py-40 overflow-hidden">
         <BigTitle
           lines={[
             "Vérifiez vos",
