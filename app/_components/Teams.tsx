@@ -24,7 +24,7 @@ const Teams = () => {
         </p>
       </div>
 
-      <div className="flex gap-8 mt-32 items-center justify-center">
+      <div className="flex flex-col md:flex-row gap-8 mt-32 items-center justify-center">
         <div className="rotate-[-4deg]">
           <Polaroid
             imageSrc="/IMG_9355.jpeg"
